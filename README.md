@@ -1,4 +1,28 @@
-# Learning Discriminative Geometry for Drifting Models
+<h1 align="center">
+  Learning Discriminative Geometry for Drifting Models
+</h1>
+
+<p align="center">
+  <a href="https://zhangdoudou.github.io/">Doudou Zhang</a><sup>1,2</sup>
+  &nbsp;&nbsp;&nbsp;
+  <a href="https://sites.google.com/view/wenwen-hou">Wenwen Hou</a><sup>1,2</sup>
+  &nbsp;&nbsp;&nbsp;
+  <a href="https://yilinchen1205.github.io/">Yilin Chen</a><sup>1,2</sup>
+  &nbsp;&nbsp;&nbsp;
+  <a href="https://livreq.github.io/">Qi Chen</a><sup>1,2,*</sup>
+</p>
+
+<p align="center">
+  <sup>1</sup>ELLIS Institute Finland
+  &nbsp;&nbsp;&nbsp;
+  <sup>2</sup>Aalto University
+</p>
+
+<p align="center">
+  <a href="https://arxiv.org/abs/2610.04703">
+    <img src="https://img.shields.io/badge/arXiv-Paper-b31b1b?style=flat&logo=arxiv&logoColor=white" alt="arXiv Paper">
+  </a>
+</p>
 
 <p align="center">
   <img src="assets/figure1.png" width="100%">
@@ -7,6 +31,16 @@
 ## News
 
 - **[2026-10]** Code released.
+
+## Abstract
+
+Recently proposed **Drifting Models** shift iterative distribution refinement from inference to training, enabling effective one-step generation. However, their performance on complex image datasets depends strongly on the representation used to construct the drifting field: pixel-space drifting performs poorly, whereas pretrained feature spaces substantially improve sample quality for reasons that remain unclear.
+
+We trace this gap to the **discriminative geometry of the representation**, which determines sample weighting in kernel density estimation (KDE) and, consequently, drift. We introduce **persistent representation learning**, which continuously learns a more discriminative representation geometry as the generator evolves across batches.
+
+We further establish a **current-step gradient equivalence between the KDE ratio loss and drift regression loss** under matched conditions, connecting density-ratio-based generator optimization to empirical drifting and motivating direct control of the drifting velocity.
+
+Across multiple datasets, our method learns effective discriminative representations directly from pixels and reduces FID by approximately **82–95%** over the original pixel-space Drifting Models, without pretrained encoders. Adapting pretrained representations and applying velocity clipping provide further gains.
 
 ## Files
 
@@ -51,7 +85,16 @@ FID can be computed between the generated samples and the training set with a st
 
 ## Citation
 
-BibTeX coming soon.
+If you find our work useful for your research, please consider citing:
+
+```bibtex
+@article{zhang2026learning,
+  title   = {Learning Discriminative Geometry for Drifting Models},
+  author  = {Zhang, Doudou and Hou, Wenwen and Chen, Yilin and Chen, Qi},
+  journal = {arXiv preprint arXiv:2610.04703},
+  year    = {2026}
+}
+```
 
 ## Acknowledgements
 
